@@ -22,6 +22,11 @@ sudo apt-get update
 sudo apt-get install jenkins
 
 ```
+### change port 8080 to another port
+```
+sudo vim /etc/default/jenkins
+HTTP_PORT=8080 # change port
+```
 ### Method 2
 ```
 sudo apt update

@@ -12,15 +12,7 @@ OpenJDK 64-Bit Server VM (build 21.0.3+11-Debian-2, mixed mode, sharing)
 ## Install Jenkins
 ### Method 1
 ```
-https://updates.jenkins.io/download/war/
-wget https://updates.jenkins.io/download/war/2.500/jenkins.war
-java -jar jenkins.war --httpPort=8082
-
-**You have choice jankins version also port number
-
-```
-### Method 2
-```
+sudo apt update
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
@@ -28,5 +20,15 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
   /etc/apt/sources.list.d/jenkins.list > /dev/null
 sudo apt-get update
 sudo apt-get install jenkins
+
+```
+### Method 2
+```
+sudo apt update
+https://updates.jenkins.io/download/war/
+wget https://updates.jenkins.io/download/war/2.500/jenkins.war
+java -jar jenkins.war --httpPort=8082
+
+**You have choice jankins version also port number
 
 ```
